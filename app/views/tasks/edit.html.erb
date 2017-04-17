@@ -1,11 +1,13 @@
-<h1>id: 
+<h1> 
 <%= @task.id %>
- のメッセージ編集ページ</h1>
+ のタスク編集ページ</h1>
+ 
+ 
 
 <%= form_for(@task) do |f| %>
 
   
-<%= f.label :content, 'メッセージ' %>
+<%= f.label :content, 'タスク' %>
 
   
 <%= f.text_field :content %>
