@@ -29,8 +29,7 @@ class TasksController < ApplicationController
 
   def update
     set_task
-
-    if @task.update(message_params)
+    if @task.update(task_params)
       flash[:success] = 'Message は正常に更新されました'
       redirect_to @task
     else
@@ -60,6 +59,6 @@ class TasksController < ApplicationController
 
   # Strong Parameter
   def task_params
-    params.require(:task).permit(:content)
+    params.require(:task).permit(:content,:status)
   end
 end
