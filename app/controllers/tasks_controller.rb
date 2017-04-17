@@ -38,6 +38,10 @@ class TasksController < ApplicationController
       render :edit
     end
   end
+  
+  def task_params
+    params.require(:task).permit(:content, :status)
+  end
 
   
   def destroy
