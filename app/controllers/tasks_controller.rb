@@ -3,6 +3,7 @@ class TasksController < ApplicationController
   
   def index
     @tasks = Task.all.page(params[:page])
+    render "toppages/index"
   end
 
   def show
